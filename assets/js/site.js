@@ -17,11 +17,17 @@ $(document).ready(function () {
 	$(".page-title").hover(function () {
 		if ($(".page-title").hasClass("right")) {
 			$(this).addClass("left").removeClass("right");
-			$(".page-title svg").css("left", "-100px");
+			$(".page-title svg").css({
+				left: "-100px",
+				transform: "rotate(-360deg)"
+			});
 			console.log("Right");
 		} else {
 			$(this).addClass("right").removeClass("left");
-			$(".page-title svg").css("left", "100px");
+			$(".page-title svg").css({
+				left: "100px",
+				transform: "rotate(360deg)"
+			});
 			console.log("Left");
 		}
 	}, function () {
