@@ -395,13 +395,13 @@ nav {
   height: -moz-calc(100vh - 65px);
   height: calc(100vh - 65px);
   position: fixed;
-  width: 240px;
-  top: 65px; }
+  top: 65px;
+  width: 240px; }
 
 header {
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
   z-index: 100;
-  background-color: #00bcd4;
+  background-color: #f44336;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -430,8 +430,8 @@ header {
     padding-left: 72px; }
 
 main {
-  position: absolute;
   left: 240px;
+  position: absolute;
   top: 65px; }
 
 footer {

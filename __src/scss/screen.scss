@@ -36,15 +36,15 @@ nav {
 	border-top: 1px solid rgba(0, 0, 0, .14);
 	height: calc(100vh - 65px);
 	position: fixed;
+	top: 65px;
 	width: 240px;
 
-	top: 65px;
 }
 
 header {
 	@include drop-shadow(2);
 	@include z-index(10);
-	background-color: color(cyan);
+	background-color: color(red);
 	display: flex;
 	height: 65px;
 	line-height: 65px;
@@ -68,8 +68,8 @@ header {
 }
 
 main {
-	position: absolute;
 	left: 240px;
+	position: absolute;
 	top: 65px;
 }
 
