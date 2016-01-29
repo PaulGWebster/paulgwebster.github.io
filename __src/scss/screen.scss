@@ -38,7 +38,6 @@ nav {
 	position: fixed;
 	top: 65px;
 	width: 240px;
-
 }
 
 header {
@@ -56,7 +55,6 @@ header {
 		background-color: color(white);
 		border-right: 1px solid rgba(0, 0, 0, .14);
 		height: 100%;
-		padding-left: 24px;
 		width: 240px;
 	}
 
@@ -64,6 +62,12 @@ header {
 		@include font(roboto);
 		color: color(white);
 		padding-left: 72px;
+	}
+
+	svg {
+		height: 40px;
+		margin: 0 auto;
+		vertical-align: middle;
 	}
 }
 
