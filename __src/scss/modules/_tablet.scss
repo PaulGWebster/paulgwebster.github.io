@@ -1,0 +1,33 @@
+.size {															// Remove
+	background-color: white;
+	opacity: .2;
+	position: fixed;
+
+	span { color: black; padding: 10px; }
+	.phone, .tablet { display: none; }
+}
+
+@media only screen and (max-width: 64em) {
+	.phone, .laptop { display: none; }							// Remove
+	.tablet { display: block !important; }						// Remove
+
+	#introduction {
+		//Hello
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.tablet, .laptop { display: none !important; }				// Remove
+	.phone { display: block !important; }						// Remove
+
+	#introduction {
+		svg { display: none; }
+		p svg {
+			display: block !important;
+		}
+	}
+}
+
+@media only screen and (min-width: 64.1em) {
+
+}

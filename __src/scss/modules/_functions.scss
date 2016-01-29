@@ -1,0 +1,132 @@
+//
+// Fonts
+// @group:	Font name
+// @id:		Font id		[light | regular | semi-bold | bold | extra-bold + (italic)]
+// @font:	Font family
+// @weight:	Font weight	[100 - 900]
+// @style:	Font style	[normal | italic | oblique]
+//
+$font-stack: (
+	(group: roboto,	id: thin,				font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 100, style: normal),
+	(group: roboto,	id: light,				font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 300, style: normal),
+	(group: roboto,	id: regular,			font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 400, style: normal),
+	(group: roboto,	id: medium,				font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 500, style: normal),
+	(group: roboto,	id: bold,				font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 700, style: normal),
+	(group: roboto,	id: extra-bold,			font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 900, style: normal),
+
+	(group: roboto,	id: thin-italic,		font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 100, style: italic),
+	(group: roboto,	id: light-italic,		font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 300, style: italic),
+	(group: roboto,	id: regular-italic,		font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 400, style: italic),
+	(group: roboto,	id: medium-italic,		font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 500, style: italic),
+	(group: roboto,	id: bold-italic,		font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 700, style: italic),
+	(group: roboto,	id: extra-bold-italic,	font: ('Roboto', 'Helvetica Neue', Helvetica, sans-serif), weight: 900, style: italic),
+
+	(group: robotoSlab,	id: thin,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 100, style: normal),
+	(group: robotoSlab,	id: light,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 300, style: normal),
+	(group: robotoSlab,	id: regular,		font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 400, style: normal),
+	(group: robotoSlab,	id: bold,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 700, style: normal),
+
+	(group: lora,	id: regular,			font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 400, style: normal),
+	(group: lora,	id: italic,				font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 400, style: italic),
+	(group: lora,	id: bold,				font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 600, style: normal),
+	(group: lora,	id: bold-italic,		font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 600, style: italic),
+);
+
+@mixin font($group, $id: regular, $size: 1) {
+	@each $font in $font-stack {
+		@if($group == map-get($font, group) and $id == map-get($font, id)) {
+			font-family: map-get($font, font);
+			font-size: $size + rem;
+			font-style: map-get($font, style);
+			font-weight: map-get($font, weight);
+		}
+	}
+}
+
+//
+// Z-index helper
+//
+@mixin z-index($level) {
+	@if $level == -1 {
+		z-index: -10;
+	}
+	@if $level == 0 {
+		z-index: 0;
+	}
+	@if $level == 1 {
+		z-index: 10;
+	}
+	@if $level == 2 {
+		z-index: 20;
+	}
+	@if $level == 3 {
+		z-index: 30;
+	}
+	@if $level == 4 {
+		z-index: 40;
+	}
+	@if $level == 5 {
+		z-index: 50;
+	}
+	@if $level == 6 {
+		z-index: 60;
+	}
+	@if $level == 7 {
+		z-index: 70;
+	}
+	@if $level == 8 {
+		z-index: 80;
+	}
+	@if $level == 9 {
+		z-index: 90;
+	}
+	@if $level == 10 {
+		z-index: 100;
+	}
+}
+
+//
+// Simple clearfix mixin
+// Returns a clearfix for that object
+//
+@mixin clearfix() {
+	*zoom: 1;
+	&:before, &:after { content: ''; display: table; line-height: 0; }
+	&:after { clear: both; }
+}
+
+//
+// Simple Zero Margin/Padding mixin
+// @return margin/padding: 0;
+//
+@mixin clean() {
+	margin: 0;
+	padding: 0;
+}
+
+
+//
+// Drop-shadow according to Google Materials
+// @param  {int}	$depth		[0-5]
+// @return {string}				[Returns box-shadow accoring to Google Materials]
+//
+@mixin drop-shadow($depth) {
+	@if $depth == 0 {
+		box-shadow: none;
+	}
+	@if $depth == 1 {
+		box-shadow: 0 1.5px 3px rgba(black, 0.24), 0 3px 8px rgba(black, 0.05);
+	}
+	@if $depth == 2 {
+		box-shadow: 0 4px 7px rgba(black, 0.23), 0 8px 25px rgba(black, 0.05);
+	}
+	@if $depth == 3 {
+		box-shadow: 0 7px 10px rgba(black, 0.30), 0 10px 50px rgba(black, 0.12);
+	}
+	@if $depth == 4 {
+		box-shadow: 0 10px 15px rgba(black, 0.28), 0 15px 60px rgba(black, 0.18);
+	}
+	@if $depth == 5 {
+		box-shadow: 0 16px 20px rgba(black, 0.29), 0 20px 65px rgba(black, 0.18);
+	}
+}

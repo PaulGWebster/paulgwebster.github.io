@@ -1,0 +1,13 @@
+.circle { border-radius: 50%; }
+
+.top-left { left: 25px; position: fixed; top: 25px; }
+.top-right { position: fixed; right: 25px; top: 25px; }
+.bottom-left { bottom: 25px; left: 25px; position: fixed; }
+.bottom-right { bottom: 25px; position: fixed; right: 25px; }
+
+
+/*
+ :::  Fixes
+-------------------------------------------------- */
+.btn-float .i-chevron-up { position: relative; top: -3px; }
+figure { @include clean; }
