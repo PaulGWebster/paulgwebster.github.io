@@ -55,7 +55,12 @@ header {
 		background-color: color(white);
 		border-right: 1px solid rgba(0, 0, 0, .14);
 		height: 100%;
+		text-align: center;
 		width: 240px;
+
+		&:hover {
+			svg { transform: rotate(360deg); }
+		}
 	}
 
 	.category-title {
@@ -66,8 +71,12 @@ header {
 
 	svg {
 		height: 40px;
-		margin: 0 auto;
 		vertical-align: middle;
+		width: 40px;
+		position: relative;
+		left: 0;
+		right: 0;
+		transition: all 1s ease;
 	}
 }
 

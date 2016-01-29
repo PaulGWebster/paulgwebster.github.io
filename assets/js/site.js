@@ -13,7 +13,20 @@ $(document).ready(function () {
 	$("main header .img").css("background-image", function () {
 		return "url(" + $(this).data("bg") + ")";
 	});
-	$("nav aside a").attr("href").replace("home", "introduction");
+
+	$(".page-title").hover(function () {
+		if ($(".page-title").hasClass("right")) {
+			$(this).addClass("left").removeClass("right");
+			$(".page-title svg").css("left", "-100px");
+			console.log("Right");
+		} else {
+			$(this).addClass("right").removeClass("left");
+			$(".page-title svg").css("left", "100px");
+			console.log("Left");
+		}
+	}, function () {
+		$(".page-title svg").css("left", "0").css("right", "0");
+	});
 
 	$("a").confirmMailto({
 		message: "Are you cool enough to send an email to $to",
@@ -70,16 +83,6 @@ $("header svg #bar").click(function () {});
 
 $("header aside svg").click(function () {
 	$(".subHeader .search").toggleClass("show");
-});
-
-$("nav").swipe({
-	//	swipeRight:function() {
-	//		$(".container").addClass("open");
-	//		document.addEventListener( eventtype, bodyClickFn );
-	//	},
-	//	swipeLeft:function() {
-	//		$(".container").removeClass("open");
-	//	}
 });
 
 !function (t) {

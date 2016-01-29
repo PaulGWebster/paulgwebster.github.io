@@ -5,7 +5,20 @@ $(document).ready(function() {
 	$("*").css("color", function(){ return $(this).data("text"); });
 	$("*").css("-webkit-animation-delay", function(){ return $(this).data("delay"); });
 	$("main header .img").css("background-image", function(){ return "url(" + $(this).data("bg") + ")"; });
-	$("nav aside a").attr("href").replace("home", "introduction");
+
+	$(".page-title").hover(function() {
+		if ($(".page-title").hasClass("right")) {
+			$(this).addClass("left").removeClass("right");
+			$(".page-title svg").css("left", "-100px");
+			console.log("Right");
+		} else {
+			$(this).addClass("right").removeClass("left");
+			$(".page-title svg").css("left", "100px");
+			console.log("Left");
+		}
+	}, function() {
+		$(".page-title svg").css("left", "0").css("right", "0");
+	});
 
 
 	$("a").confirmMailto({
@@ -65,16 +78,6 @@ $("header svg #bar").click(function(){
 
 $("header aside svg").click(function(){
 	$(".subHeader .search").toggleClass("show");
-});
-
-$("nav").swipe({
-//	swipeRight:function() {
-//		$(".container").addClass("open");
-//		document.addEventListener( eventtype, bodyClickFn );
-//	},
-//	swipeLeft:function() {
-//		$(".container").removeClass("open");
-//	}
 });
 
 !function(t){t.fn.confirmMailto=function(e){var n=t.extend({message:"Do you want to send an email to $to?",to:"href",callback:function(){},success:function(){},fail:function(){}},e),a=/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi,i=function(e){var i=n.message,c=n.to;if(c="href"==c?t(this).attr("href").match(a):"html"==c?t(this).html():c,i=i.replace("$to",c)==i?i+c:i.replace("$to",c),confirm(i)){n.success();var o=!0}else{e.preventDefault(),n.fail();var o=!1}return setTimeout(function(){n.callback(o)},1),o};return this.filter('[href^="mailto:"]').each(function(){t(this).bind("click",i)}),this}}($);

@@ -419,7 +419,13 @@ header {
     background-color: white;
     border-right: 1px solid rgba(0, 0, 0, 0.14);
     height: 100%;
+    text-align: center;
     width: 240px; }
+    header .page-title:hover svg {
+      -webkit-transform: rotate(360deg);
+         -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+              transform: rotate(360deg); }
   header .category-title {
     font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1rem;
@@ -429,8 +435,14 @@ header {
     padding-left: 72px; }
   header svg {
     height: 40px;
-    margin: 0 auto;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 40px;
+    position: relative;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease; }
 
 main {
   left: 240px;
