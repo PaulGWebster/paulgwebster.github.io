@@ -358,12 +358,6 @@ figure {
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
 
-::-moz-selection {
-  color: #212121; }
-
-::selection {
-  color: #212121; }
-
 :root {
   font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1rem;
@@ -397,6 +391,39 @@ nav {
   position: fixed;
   top: 65px;
   width: 240px; }
+  nav ul {
+    padding: 12px 0; }
+    nav ul li {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 0.8125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1em; }
+      nav ul li a {
+        display: block;
+        padding: 15px 0 15px 22px; }
+        nav ul li a:hover {
+          background-color: #eeeeee; }
+      nav ul li.title {
+        padding: 10px 0 10px 22px; }
+        nav ul li.title:hover {
+          background-color: transparent; }
+      nav ul li span {
+        display: none; }
+      nav ul li ul {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        -webkit-transition: height .3s ease;
+        -moz-transition: height .3s ease;
+        transition: height .3s ease; }
+        nav ul li ul li {
+          font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+          font-size: 0.8125rem;
+          font-style: normal;
+          font-weight: 400; }
+          nav ul li ul li a {
+            padding: 10px 0 10px 46px; }
 
 header {
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);

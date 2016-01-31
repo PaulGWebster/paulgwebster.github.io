@@ -19,7 +19,7 @@ $(document).ready(function () {
 			$(this).addClass("left").removeClass("right");
 			$(".page-title svg").css({
 				left: "-100px",
-				transform: "rotate(-360deg)"
+				transform: "rotate(0)"
 			});
 			console.log("Right");
 		} else {
@@ -31,7 +31,7 @@ $(document).ready(function () {
 			console.log("Left");
 		}
 	}, function () {
-		$(".page-title svg").css("left", "0").css("right", "0");
+		$(".page-title svg").css("left", "0");
 	});
 
 	$("a").confirmMailto({
@@ -82,6 +82,16 @@ $(document).ready(function () {
 	stickyNav();
 	$(window).scroll(function () {
 		stickyNav();
+	});
+
+	$(".children").click(function () {
+		var sidebarLength = $(this).children("ul").children().length;
+
+		if ($(this).children("ul").hasClass("visible")) {
+			$(this).children("ul").css("height", 0).removeClass("visible");
+		} else {
+			$(this).children("ul").css("height", sidebarLength * 33 + "px").addClass("visible");
+		}
 	});
 });
 

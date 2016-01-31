@@ -8,7 +8,7 @@
 @import 'partials/helpers';
 
 * { @include clean; box-sizing: border-box; }
-::selection { color: color(black); }
+//::selection { color: color(black); }
 
 :root {
 	@include font(roboto);
@@ -38,6 +38,48 @@ nav {
 	position: fixed;
 	top: 65px;
 	width: 240px;
+
+	ul {
+		padding: 12px 0;
+
+		li {
+			@include font(roboto, bold, .8125);
+			line-height: 1em;
+
+			a {
+				display: block;
+				padding: 15px 0 15px 22px;
+
+				&:hover {
+					background-color: color(grey, lighten-3);
+				}
+			}
+
+			&.title {
+				padding: 10px 0 10px 22px;
+				&:hover { background-color: transparent; }
+			}
+
+			span {
+				display: none;
+			}
+
+			ul {
+				height: 0;
+				overflow: hidden;
+				padding: 0;
+				transition: height .3s ease;
+
+				li {
+					@include font(roboto, regular, .8125);
+
+					a {
+						padding: 10px 0 10px 46px;
+					}
+				}
+			}
+		}
+	}
 }
 
 header {
