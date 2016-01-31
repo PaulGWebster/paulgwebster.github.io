@@ -532,6 +532,8 @@ article .article-header {
   nav {
     left: -240px;
     position: relative; }
+    nav.menu-open {
+      left: 0; }
   main {
     left: 0;
     width: 100vw; } }

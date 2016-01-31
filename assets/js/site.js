@@ -98,9 +98,9 @@ $(document).ready(function () {
 	$(".toggle-menu").click(function () {
 		$(".overlay").css("display", "block");
 
-		$("nav").css("left", "0");
+		$("nav").addClass("menu-open");
 		$(".overlay").click(function () {
-			$("nav").css("left", "-240px");
+			$("nav").removeClass("menu-open");
 
 			setTimeout(function () {
 				$(".overlay").css("display", "none");

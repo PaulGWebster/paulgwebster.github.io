@@ -18,6 +18,8 @@
 	nav {
 		left: -240px;
 		position: relative;
+
+		&.menu-open { left: 0; }
 	}
 
 	main {
