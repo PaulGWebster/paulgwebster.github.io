@@ -30,14 +30,12 @@ body {
 }
 
 nav {
-	@include z-index(8);
+	@include z-index(10);
 	background-color: color(white);
 	border-right: 1px solid rgba(0, 0, 0, .14);
-	border-top: 1px solid rgba(0, 0, 0, .14);
-	height: calc(100vh - 65px);
+	height: 100vh;
 	position: fixed;
-	top: 65px;
-	transition: all .3s ease;
+	transition: left .3s ease;
 	width: 240px;
 
 	ul {
@@ -83,61 +81,32 @@ nav {
 	}
 }
 
-.page-title {
-	@include font(roboto, medium, 2);
-	background-color: color(white);
-	border-right: 1px solid rgba(0, 0, 0, .14);
-	height: 65px;
-	text-align: center;
-	width: 240px;
-
-	&:hover {
-		svg { transform: rotate(360deg); }
-	}
-
-	svg {
-		height: 40px;
-		left: 0;
-		position: relative;
-		right: 0;
-		transition: all 1s ease;
-		vertical-align: middle;
-		width: 40px;
-	}
-}
-
 header {
 	@include drop-shadow(2);
-	@include z-index(8);
+	@include z-index(2);
 	background-color: color(red);
-	display: flex;
 	height: 65px;
+	left: 240px;
 	line-height: 65px;
 	position: fixed;
-	width: 100vw;
+	transition: all .3s ease;
+	width: calc(100vw - 240px);
 
 	.category-title {
 		@include font(roboto);
 		color: color(white);
 		padding-left: 72px;
 	}
+}
 
-	.toggle-menu {
-		color: color(black);
-		font-size: 1rem;
-		position: absolute;
-		text-align: center;
-		width: 65px;
+.toggle-menu {
+	@include z-index(10);
+	left: 0;
+	position: absolute;
+	top: 0;
 
-		svg {
-			position: relative;
-			top: -1px;
-			vertical-align: middle;
-		}
-	}
-
-	.page-title {
-		transition: width .3s ease;
+	svg {
+		padding: 20.5px;
 	}
 }
 
@@ -145,7 +114,7 @@ main {
 	left: 240px;
 	position: absolute;
 	top: 65px;
-	transition: left .3s ease;
+	transition: all .3s ease;
 	width: 100%;
 }
 
@@ -165,25 +134,7 @@ article {
 }
 
 footer {
-	height: 75px;
-	padding: 20px;
-	text-align: right;
-
-	ul {
-		padding: 10px 0;
-
-		&:first-child { border-bottom: 1px solid black; padding-top: 0; }
-
-		li {
-			display: inline;
-			padding: 0 15px 0 0;
-
-			.i-heart { color: color(red); padding-left: 5px; }
-
-			&:before { color: #212121; content: '/'; padding-right: 15px; }
-			&:first-child:before { content: ''; padding-right: 0; }
-		}
-	}
+	//
 }
 
 .overlay {
@@ -194,6 +145,31 @@ footer {
 	position: absolute;
 	top: 0;
 	width: 100vw;
+}
+
+.page-title {
+	@include font(roboto, medium, 2);
+	background-color: color(white);
+	border-bottom: 1px solid rgba(0, 0, 0, .14);
+	border-right: 1px solid rgba(0, 0, 0, .14);
+	height: 66px;
+	line-height: 65px;
+	text-align: center;
+	width: 240px;
+
+	&:hover {
+		svg { transform: rotate(360deg); }
+	}
+
+	svg {
+		height: 40px;
+		left: 0;
+		position: relative;
+		right: 0;
+		transition: all 1s ease;
+		vertical-align: middle;
+		width: 40px;
+	}
 }
 
 @import 'modules/tablet';
