@@ -34,6 +34,8 @@ nav {
 	background-color: color(white);
 	border-right: 1px solid rgba(0, 0, 0, .14);
 	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
 	position: fixed;
 	transition: left .3s ease;
 	width: 240px;
@@ -102,7 +104,7 @@ header {
 .toggle-menu {
 	@include z-index(10);
 	left: 0;
-	position: absolute;
+	position: fixed;
 	top: 0;
 
 	svg {
@@ -142,7 +144,7 @@ footer {
 	background-color: rgba(0, 0, 0, .5);
 	display: none;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100vw;
 }

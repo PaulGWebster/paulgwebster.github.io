@@ -17,7 +17,7 @@
 
 	nav {
 		left: -240px;
-		position: relative;
+		position: fixed;
 
 		&.menu-open { left: 0; }
 	}
@@ -38,7 +38,7 @@
 
 	nav {
 		left: 0;
-		position: relative;
+		position: fixed;
 	}
 
 	main {

@@ -59,11 +59,6 @@ $(document).ready(function () {
 		}
 	};
 
-	stickyNav();
-	$(window).scroll(function () {
-		stickyNav();
-	});
-
 	$(".children").click(function (e) {
 		var sidebarLength = $(this).children("ul").children().length;
 		var target = $(e.target).parent();
@@ -77,12 +72,13 @@ $(document).ready(function () {
 
 	$(".toggle-menu").click(function () {
 		$(".overlay").css("display", "block");
-
 		$("nav").addClass("menu-open");
+
 		$(".overlay").click(function () {
 			$("nav").removeClass("menu-open");
 
 			setTimeout(function () {
+				$("body").removeClass("stop-scroll");
 				$(".overlay").css("display", "none");
 			}, 300);
 		});

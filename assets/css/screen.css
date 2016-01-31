@@ -386,6 +386,8 @@ nav {
   background-color: white;
   border-right: 1px solid rgba(0, 0, 0, 0.14);
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: fixed;
   -webkit-transition: left .3s ease;
   -moz-transition: left .3s ease;
@@ -449,7 +451,7 @@ header {
 .toggle-menu {
   z-index: 100;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0; }
   .toggle-menu svg {
     padding: 20.5px; }
@@ -481,7 +483,7 @@ article .article-header {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw; }
 
@@ -520,7 +522,7 @@ article .article-header {
     width: 100vw; }
   nav {
     left: -240px;
-    position: relative; }
+    position: fixed; }
     nav.menu-open {
       left: 0; }
   main {
@@ -536,7 +538,7 @@ article .article-header {
     width: calc(100vw - 240px); }
   nav {
     left: 0;
-    position: relative; }
+    position: fixed; }
   main {
     left: 240px;
     width: -moz-calc(100vw - 240px);
