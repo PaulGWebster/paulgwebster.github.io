@@ -31,3 +31,48 @@
 @media only screen and (min-width: 64.1em) {
 
 }
+@media only screen and (min-width: 1480px) {
+	.toggle-menu {
+		display: none;
+	}
+
+	nav {
+		.page-title { display: none; }
+	}
+}
+
+@media only screen and (max-width: 1480px) {
+	header {
+		.page-title { overflow: hidden; width: 0; border-right: none; }
+	}
+
+	nav {
+		border-right: 0;
+		overflow: hidden;
+		width: 0;
+
+		&.menu-open {
+			@include z-index(10);
+			border-right: 1px solid rgba(0, 0, 0, .14);
+			height: 100vh;
+			top: 0;
+			width: 240px;
+		}
+
+		&.menu-close {
+			@include z-index(10);
+			border-right: 1px solid rgba(0, 0, 0, .14);
+			height: 100vh;
+			top: 0;
+			width: 0;
+		}
+
+		.page-title {
+			border-bottom: 1px solid rgba(0, 0, 0, .14);
+		}
+	}
+
+	main {
+		left: 0;
+	}
+}

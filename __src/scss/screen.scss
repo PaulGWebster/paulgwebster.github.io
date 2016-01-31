@@ -30,13 +30,14 @@ body {
 }
 
 nav {
-	@include z-index(10);
+	@include z-index(8);
 	background-color: color(white);
 	border-right: 1px solid rgba(0, 0, 0, .14);
 	border-top: 1px solid rgba(0, 0, 0, .14);
 	height: calc(100vh - 65px);
 	position: fixed;
 	top: 65px;
+	transition: all .3s ease;
 	width: 240px;
 
 	ul {
@@ -82,9 +83,32 @@ nav {
 	}
 }
 
+.page-title {
+	@include font(roboto, medium, 2);
+	background-color: color(white);
+	border-right: 1px solid rgba(0, 0, 0, .14);
+	height: 65px;
+	text-align: center;
+	width: 240px;
+
+	&:hover {
+		svg { transform: rotate(360deg); }
+	}
+
+	svg {
+		height: 40px;
+		left: 0;
+		position: relative;
+		right: 0;
+		transition: all 1s ease;
+		vertical-align: middle;
+		width: 40px;
+	}
+}
+
 header {
 	@include drop-shadow(2);
-	@include z-index(10);
+	@include z-index(8);
 	background-color: color(red);
 	display: flex;
 	height: 65px;
@@ -92,33 +116,28 @@ header {
 	position: fixed;
 	width: 100vw;
 
-	.page-title {
-		@include font(roboto, medium, 2);
-		background-color: color(white);
-		border-right: 1px solid rgba(0, 0, 0, .14);
-		height: 100%;
-		text-align: center;
-		width: 240px;
-
-		&:hover {
-			svg { transform: rotate(360deg); }
-		}
-	}
-
 	.category-title {
 		@include font(roboto);
 		color: color(white);
 		padding-left: 72px;
 	}
 
-	svg {
-		height: 40px;
-		vertical-align: middle;
-		width: 40px;
-		position: relative;
-		left: 0;
-		right: 0;
-		transition: all 1s ease;
+	.toggle-menu {
+		color: color(black);
+		font-size: 1rem;
+		position: absolute;
+		text-align: center;
+		width: 65px;
+
+		svg {
+			position: relative;
+			top: -1px;
+			vertical-align: middle;
+		}
+	}
+
+	.page-title {
+		transition: width .3s ease;
 	}
 }
 
@@ -126,6 +145,23 @@ main {
 	left: 240px;
 	position: absolute;
 	top: 65px;
+	transition: left .3s ease;
+	width: 100%;
+}
+
+article {
+	.article-header {
+		background-color: color(red);
+		height: 260px;
+		position: relative;
+		top: -65px;
+
+		p {
+			@include font(roboto, bold, 3.5);
+			margin: 0 auto;
+			width: 1160px;
+		}
+	}
 }
 
 footer {
@@ -148,6 +184,16 @@ footer {
 			&:first-child:before { content: ''; padding-right: 0; }
 		}
 	}
+}
+
+.overlay {
+	@include z-index(9);
+	background-color: rgba(0, 0, 0, .5);
+	display: none;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	width: 100vw;
 }
 
 @import 'modules/tablet';

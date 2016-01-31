@@ -382,7 +382,7 @@ body {
   color: #212121; }
 
 nav {
-  z-index: 100;
+  z-index: 80;
   background-color: white;
   border-right: 1px solid rgba(0, 0, 0, 0.14);
   border-top: 1px solid rgba(0, 0, 0, 0.14);
@@ -390,6 +390,9 @@ nav {
   height: calc(100vh - 65px);
   position: fixed;
   top: 65px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
   width: 240px; }
   nav ul {
     padding: 12px 0; }
@@ -425,9 +428,35 @@ nav {
           nav ul li ul li a {
             padding: 10px 0 10px 46px; }
 
+.page-title {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  background-color: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.14);
+  height: 65px;
+  text-align: center;
+  width: 240px; }
+  .page-title:hover svg {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  .page-title svg {
+    height: 40px;
+    left: 0;
+    position: relative;
+    right: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+    vertical-align: middle;
+    width: 40px; }
+
 header {
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
-  z-index: 100;
+  z-index: 80;
   background-color: #f44336;
   display: -webkit-box;
   display: -webkit-flex;
@@ -438,21 +467,6 @@ header {
   line-height: 65px;
   position: fixed;
   width: 100vw; }
-  header .page-title {
-    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 500;
-    background-color: white;
-    border-right: 1px solid rgba(0, 0, 0, 0.14);
-    height: 100%;
-    text-align: center;
-    width: 240px; }
-    header .page-title:hover svg {
-      -webkit-transform: rotate(360deg);
-         -moz-transform: rotate(360deg);
-          -ms-transform: rotate(360deg);
-              transform: rotate(360deg); }
   header .category-title {
     font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1rem;
@@ -460,21 +474,42 @@ header {
     font-weight: 400;
     color: white;
     padding-left: 72px; }
-  header svg {
-    height: 40px;
-    vertical-align: middle;
-    width: 40px;
-    position: relative;
-    left: 0;
-    right: 0;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    transition: all 1s ease; }
+  header .toggle-menu {
+    color: #212121;
+    font-size: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 65px; }
+    header .toggle-menu svg {
+      position: relative;
+      top: -1px;
+      vertical-align: middle; }
+  header .page-title {
+    -webkit-transition: width .3s ease;
+    -moz-transition: width .3s ease;
+    transition: width .3s ease; }
 
 main {
   left: 240px;
   position: absolute;
-  top: 65px; }
+  top: 65px;
+  -webkit-transition: left .3s ease;
+  -moz-transition: left .3s ease;
+  transition: left .3s ease;
+  width: 100%; }
+
+article .article-header {
+  background-color: #f44336;
+  height: 260px;
+  position: relative;
+  top: -65px; }
+  article .article-header p {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 1160px; }
 
 footer {
   height: 75px;
@@ -498,6 +533,15 @@ footer {
       footer ul li:first-child:before {
         content: '';
         padding-right: 0; }
+
+.overlay {
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw; }
 
 .size {
   background-color: white;
@@ -524,5 +568,37 @@ footer {
     display: none; }
   #introduction p svg {
     display: block !important; } }
+
+@media only screen and (min-width: 1480px) {
+  .toggle-menu {
+    display: none; }
+  nav .page-title {
+    display: none; } }
+
+@media only screen and (max-width: 1480px) {
+  header .page-title {
+    overflow: hidden;
+    width: 0;
+    border-right: none; }
+  nav {
+    border-right: 0;
+    overflow: hidden;
+    width: 0; }
+    nav.menu-open {
+      z-index: 100;
+      border-right: 1px solid rgba(0, 0, 0, 0.14);
+      height: 100vh;
+      top: 0;
+      width: 240px; }
+    nav.menu-close {
+      z-index: 100;
+      border-right: 1px solid rgba(0, 0, 0, 0.14);
+      height: 100vh;
+      top: 0;
+      width: 0; }
+    nav .page-title {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.14); }
+  main {
+    left: 0; } }
 
 /*# sourceMappingURL=screen.css.map */
