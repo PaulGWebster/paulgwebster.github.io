@@ -382,17 +382,14 @@ body {
   color: #212121; }
 
 nav {
-  z-index: 80;
+  z-index: 100;
   background-color: white;
   border-right: 1px solid rgba(0, 0, 0, 0.14);
-  border-top: 1px solid rgba(0, 0, 0, 0.14);
-  height: -moz-calc(100vh - 65px);
-  height: calc(100vh - 65px);
+  height: 100vh;
   position: fixed;
-  top: 65px;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: left .3s ease;
+  -moz-transition: left .3s ease;
+  transition: left .3s ease;
   width: 240px; }
   nav ul {
     padding: 12px 0; }
@@ -428,14 +425,76 @@ nav {
           nav ul li ul li a {
             padding: 10px 0 10px 46px; }
 
+header {
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
+  z-index: 20;
+  background-color: #f44336;
+  height: 65px;
+  left: 240px;
+  line-height: 65px;
+  position: fixed;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  width: -moz-calc(100vw - 240px);
+  width: calc(100vw - 240px); }
+  header .category-title {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    padding-left: 72px; }
+
+.toggle-menu {
+  z-index: 100;
+  left: 0;
+  position: absolute;
+  top: 0; }
+  .toggle-menu svg {
+    padding: 20.5px; }
+
+main {
+  left: 240px;
+  position: absolute;
+  top: 65px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 100%; }
+
+article .article-header {
+  background-color: #f44336;
+  height: 260px;
+  position: relative;
+  top: -65px; }
+  article .article-header p {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 1160px; }
+
+.overlay {
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw; }
+
 .page-title {
   font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   border-right: 1px solid rgba(0, 0, 0, 0.14);
-  height: 65px;
+  height: 66px;
+  line-height: 65px;
   text-align: center;
   width: 240px; }
   .page-title:hover svg {
@@ -454,95 +513,6 @@ nav {
     vertical-align: middle;
     width: 40px; }
 
-header {
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
-  z-index: 80;
-  background-color: #f44336;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 65px;
-  line-height: 65px;
-  position: fixed;
-  width: 100vw; }
-  header .category-title {
-    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    color: white;
-    padding-left: 72px; }
-  header .toggle-menu {
-    color: #212121;
-    font-size: 1rem;
-    position: absolute;
-    text-align: center;
-    width: 65px; }
-    header .toggle-menu svg {
-      position: relative;
-      top: -1px;
-      vertical-align: middle; }
-  header .page-title {
-    -webkit-transition: width .3s ease;
-    -moz-transition: width .3s ease;
-    transition: width .3s ease; }
-
-main {
-  left: 240px;
-  position: absolute;
-  top: 65px;
-  -webkit-transition: left .3s ease;
-  -moz-transition: left .3s ease;
-  transition: left .3s ease;
-  width: 100%; }
-
-article .article-header {
-  background-color: #f44336;
-  height: 260px;
-  position: relative;
-  top: -65px; }
-  article .article-header p {
-    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 3.5rem;
-    font-style: normal;
-    font-weight: 700;
-    margin: 0 auto;
-    width: 1160px; }
-
-footer {
-  height: 75px;
-  padding: 20px;
-  text-align: right; }
-  footer ul {
-    padding: 10px 0; }
-    footer ul:first-child {
-      border-bottom: 1px solid black;
-      padding-top: 0; }
-    footer ul li {
-      display: inline;
-      padding: 0 15px 0 0; }
-      footer ul li .i-heart {
-        color: #f44336;
-        padding-left: 5px; }
-      footer ul li:before {
-        color: #212121;
-        content: '/';
-        padding-right: 15px; }
-      footer ul li:first-child:before {
-        content: '';
-        padding-right: 0; }
-
-.overlay {
-  z-index: 90;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100vw; }
-
 .size {
   background-color: white;
   opacity: .2;
@@ -553,52 +523,32 @@ footer {
   .size .phone, .size .tablet {
     display: none; }
 
-@media only screen and (max-width: 64em) {
-  .phone, .laptop {
-    display: none; }
-  .tablet {
-    display: block !important; } }
+@media only screen and (max-width: 1440px) {
+  .toggle-menu {
+    display: block; }
+  header {
+    left: 0;
+    width: 100vw; }
+  nav {
+    left: -240px;
+    position: relative; }
+  main {
+    left: 0;
+    width: 100vw; } }
 
-@media only screen and (max-width: 37.5em) {
-  .tablet, .laptop {
-    display: none !important; }
-  .phone {
-    display: block !important; }
-  #introduction svg {
-    display: none; }
-  #introduction p svg {
-    display: block !important; } }
-
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1440px) {
   .toggle-menu {
     display: none; }
-  nav .page-title {
-    display: none; } }
-
-@media only screen and (max-width: 1480px) {
-  header .page-title {
-    overflow: hidden;
-    width: 0;
-    border-right: none; }
+  header {
+    left: 240px;
+    width: -moz-calc(100vw - 240px);
+    width: calc(100vw - 240px); }
   nav {
-    border-right: 0;
-    overflow: hidden;
-    width: 0; }
-    nav.menu-open {
-      z-index: 100;
-      border-right: 1px solid rgba(0, 0, 0, 0.14);
-      height: 100vh;
-      top: 0;
-      width: 240px; }
-    nav.menu-close {
-      z-index: 100;
-      border-right: 1px solid rgba(0, 0, 0, 0.14);
-      height: 100vh;
-      top: 0;
-      width: 0; }
-    nav .page-title {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.14); }
+    left: 0;
+    position: relative; }
   main {
-    left: 0; } }
+    left: 240px;
+    width: -moz-calc(100vw - 240px);
+    width: calc(100vw - 240px); } }
 
 /*# sourceMappingURL=screen.css.map */

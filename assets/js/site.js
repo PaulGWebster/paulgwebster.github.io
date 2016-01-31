@@ -14,25 +14,25 @@ $(document).ready(function () {
 		return "url(" + $(this).data("bg") + ")";
 	});
 
-	$(".page-title").hover(function () {
-		if ($(".page-title").hasClass("right")) {
-			$(this).addClass("left").removeClass("right");
-			$(".page-title svg").css({
-				left: "-100px",
-				transform: "rotate(0)"
-			});
-			console.log("Right");
-		} else {
-			$(this).addClass("right").removeClass("left");
-			$(".page-title svg").css({
-				left: "100px",
-				transform: "rotate(360deg)"
-			});
-			console.log("Left");
-		}
-	}, function () {
-		$(".page-title svg").css("left", "0");
-	});
+	/*$(".page-title").hover(function() {
+ 	if ($(".page-title").hasClass("right")) {
+ 		$(this).addClass("left").removeClass("right");
+ 		$(".page-title svg").css({
+ 			left: "-100px",
+ 			transform: "rotate(0)"
+ 		});
+ 		console.log("Right");
+ 	} else {
+ 		$(this).addClass("right").removeClass("left");
+ 		$(".page-title svg").css({
+ 			left: "100px",
+ 			transform: "rotate(360deg)"
+ 		});
+ 		console.log("Left");
+ 	}
+ }, function() {
+ 	$(".page-title svg").css("left", "0");
+ });*/
 
 	$("a").confirmMailto({
 		message: "Are you cool enough to send an email to $to",
@@ -95,14 +95,14 @@ $(document).ready(function () {
 		}
 	});
 
-	$("header .toggle-menu").click(function () {
+	$(".toggle-menu").click(function () {
 		$(".overlay").css("display", "block");
-		$("nav").removeClass("menu-close").addClass("menu-open");
+
+		$("nav").css("left", "0");
 		$(".overlay").click(function () {
-			$("nav").removeClass("menu-open").addClass("menu-close");
+			$("nav").css("left", "-240px");
 
 			setTimeout(function () {
-				$("nav").css("border-right", "none");
 				$(".overlay").css("display", "none");
 			}, 300);
 		});

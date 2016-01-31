@@ -7,72 +7,40 @@
 	.phone, .tablet { display: none; }
 }
 
-@media only screen and (max-width: 64em) {
-	.phone, .laptop { display: none; }							// Remove
-	.tablet { display: block !important; }						// Remove
+@media only screen and (max-width: 1440px) {
+	.toggle-menu { display: block; }
 
-	#introduction {
-		//Hello
-	}
-}
-
-@media only screen and (max-width: 37.5em) {
-	.tablet, .laptop { display: none !important; }				// Remove
-	.phone { display: block !important; }						// Remove
-
-	#introduction {
-		svg { display: none; }
-		p svg {
-			display: block !important;
-		}
-	}
-}
-
-@media only screen and (min-width: 64.1em) {
-
-}
-@media only screen and (min-width: 1480px) {
-	.toggle-menu {
-		display: none;
-	}
-
-	nav {
-		.page-title { display: none; }
-	}
-}
-
-@media only screen and (max-width: 1480px) {
 	header {
-		.page-title { overflow: hidden; width: 0; border-right: none; }
+		left: 0;
+		width: 100vw;
 	}
 
 	nav {
-		border-right: 0;
-		overflow: hidden;
-		width: 0;
-
-		&.menu-open {
-			@include z-index(10);
-			border-right: 1px solid rgba(0, 0, 0, .14);
-			height: 100vh;
-			top: 0;
-			width: 240px;
-		}
-
-		&.menu-close {
-			@include z-index(10);
-			border-right: 1px solid rgba(0, 0, 0, .14);
-			height: 100vh;
-			top: 0;
-			width: 0;
-		}
-
-		.page-title {
-			border-bottom: 1px solid rgba(0, 0, 0, .14);
-		}
+		left: -240px;
+		position: relative;
 	}
 
 	main {
 		left: 0;
+		width: 100vw;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.toggle-menu { display: none; }
+
+	header {
+		left: 240px;
+		width: calc(100vw - 240px);
+	}
+
+	nav {
+		left: 0;
+		position: relative;
+	}
+
+	main {
+		left: 240px;
+		width: calc(100vw - 240px);
 	}
 }
