@@ -64,10 +64,10 @@ nav {
 			}
 
 			ul {
-				height: 0;
+				max-height: 0;
 				overflow: hidden;
 				padding: 0;
-				transition: height .3s ease;
+				transition: max-height .3s ease;
 
 				li {
 					@include font(roboto, regular, .8125);
@@ -157,16 +157,8 @@ footer {
 	text-align: center;
 	width: 240px;
 
-	&:hover {
-		svg { transform: rotate(360deg); }
-	}
-
 	svg {
 		height: 40px;
-		left: 0;
-		position: relative;
-		right: 0;
-		transition: all 1s ease;
 		vertical-align: middle;
 		width: 40px;
 	}

@@ -411,12 +411,12 @@ nav {
       nav ul li span {
         display: none; }
       nav ul li ul {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         padding: 0;
-        -webkit-transition: height .3s ease;
-        -moz-transition: height .3s ease;
-        transition: height .3s ease; }
+        -webkit-transition: max-height .3s ease;
+        -moz-transition: max-height .3s ease;
+        transition: max-height .3s ease; }
         nav ul li ul li {
           font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
           font-size: 0.8125rem;
@@ -497,19 +497,8 @@ article .article-header {
   line-height: 65px;
   text-align: center;
   width: 240px; }
-  .page-title:hover svg {
-    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg); }
   .page-title svg {
     height: 40px;
-    left: 0;
-    position: relative;
-    right: 0;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    transition: all 1s ease;
     vertical-align: middle;
     width: 40px; }
 

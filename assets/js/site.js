@@ -14,26 +14,6 @@ $(document).ready(function () {
 		return "url(" + $(this).data("bg") + ")";
 	});
 
-	/*$(".page-title").hover(function() {
- 	if ($(".page-title").hasClass("right")) {
- 		$(this).addClass("left").removeClass("right");
- 		$(".page-title svg").css({
- 			left: "-100px",
- 			transform: "rotate(0)"
- 		});
- 		console.log("Right");
- 	} else {
- 		$(this).addClass("right").removeClass("left");
- 		$(".page-title svg").css({
- 			left: "100px",
- 			transform: "rotate(360deg)"
- 		});
- 		console.log("Left");
- 	}
- }, function() {
- 	$(".page-title svg").css("left", "0");
- });*/
-
 	$("a").confirmMailto({
 		message: "Are you cool enough to send an email to $to",
 		to: "html", //html/href
@@ -84,14 +64,14 @@ $(document).ready(function () {
 		stickyNav();
 	});
 
-	$(".children a").click(function (e) {
-		var sidebarLength = $(".children ul").children().length;
+	$(".children").click(function (e) {
+		var sidebarLength = $(this).children("ul").children().length;
 		var target = $(e.target).parent();
 
-		if ($(".children ul").hasClass("open") && target.hasClass("children")) {
-			$(".children ul").css("height", 0).removeClass("open");
+		if ($(this).children("ul").hasClass("open") && target.hasClass("children")) {
+			$(this).children("ul").css("max-height", "0px").removeClass("open");
 		} else {
-			$(".children ul").css("height", sidebarLength * 33 + "px").addClass("open");
+			$(this).children("ul").css("max-height", "500px").addClass("open");
 		}
 	});
 
