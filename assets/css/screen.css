@@ -377,14 +377,12 @@ nav {
       font-style: normal;
       font-weight: 700;
       line-height: 1em; }
-      nav ul li i {
+      nav ul li a, nav ul li i {
         display: block;
+        cursor: pointer;
         font-style: normal;
         padding: 15px 0 15px 22px; }
-      nav ul li a {
-        display: block;
-        padding: 15px 0 15px 22px; }
-        nav ul li a:hover {
+        nav ul li a:hover, nav ul li i:hover {
           background-color: #eeeeee; }
       nav ul li.title {
         padding: 10px 0 10px 22px; }
