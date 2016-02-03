@@ -10,7 +10,7 @@ $(document).ready(function() {
 		window.location.hash = "#preface";
 	}
 
-	$(".children").click(function(e) {
+	$(".children").on("click tap touchstart", function(e) {
 		var sidebarLength = $(this).children("ul").children().length;
 		var target = $(e.target).parent();
 
@@ -21,11 +21,11 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".toggle-menu").click(function() {
+	$(".toggle-menu").on("click tap touchstart", function() {
 		$(".overlay").css("display", "block");
 		$("nav").addClass("menu-open");
 
-		$(".overlay").click(function() {
+		$(".overlay").on("click tap touchstart", function() {
 			$("nav").removeClass("menu-open");
 
 			setTimeout(function(){
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		});
 	});
 
-	$("a").click(function(event) {
+	$("a").on("click tap touchstart", function(event) {
 		if ($(this).attr("target") === "category" || $(this).parent("nav")) {
 			console.log("Target is a category");
 			var target = $(event.target).attr("href");
@@ -47,6 +47,6 @@ $(document).ready(function() {
 				$("main article[data-category='" + target + "']").show("300");
 				return true;
 			}
-		}
+		}		
 	});
 });
