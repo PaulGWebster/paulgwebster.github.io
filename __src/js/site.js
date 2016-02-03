@@ -19,7 +19,7 @@ $(document).ready(function() {
 	});
 
 	$(".toggle-menu").on("click tap touchstart", function() {
-		$(".overlay").css("display", "block");
+		$(".overlay").show();
 		$("nav").addClass("menu-open");
 
 		$(".overlay").on("click tap touchstart", function() {
@@ -27,11 +27,26 @@ $(document).ready(function() {
 
 			setTimeout(function(){
 				$("body").removeClass("stop-scroll");
-				$(".overlay").css("display", "none");
+				$(".overlay").hide();
 			}, 300);
 		});
 	});
 
+	/**
+	 * Detect if window is wider that 1480px, and if the overlay is active.
+	 * Then remove overlay, and keep menu tray open
+	 */
+	$(window).resize(function(event) {
+		var checkWidth = $(this).width();
+		if ((checkWidth >= 1480) && ($(".overlay").css("display") === "block") && ($("nav").hasClass("menu-open"))) {
+			$("nav").removeClass("menu-open");
+			$(".overlay").hide();
+		}
+	});
+
+	/**
+	 * Detect link clicks, if target is category, or it's in the nav, load the section requested
+	 */
 	$("a").on("click", function(event) {
 		if ($(this).data("target") === "category" || $(this).parent("nav")) {
 			console.log("Target is a category");
