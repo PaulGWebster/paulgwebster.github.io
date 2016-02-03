@@ -80,100 +80,57 @@
 
 		<main>
 			<article id="#handbook">
-				<div><div><h1 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="idp56561744"></a>FreeBSD Handbook</h1></div><div><div xmlns="http://www.w3.org/1999/xhtml" class="author"><h3 class="author"><span class="orgname">The FreeBSD Documentation Project</span></h3></div></div><div>Revision: <a href="https://svnweb.freebsd.org/changeset/doc/48108"><span class="svnref">48108</span></a></div><div><p xmlns="http://www.w3.org/1999/xhtml" class="copyright">Copyright © 1995-2015 The FreeBSD Documentation Project</p></div><div><div xmlns="http://www.w3.org/1999/xhtml" class="legalnotice"><a id="legalnotice"></a><p class="legalnotice-title"><strong>Copyright</strong></p><p>Redistribution and use in source (XML DocBook) and 'compiled'
-    forms (XML, HTML, PDF, PostScript, RTF and so forth) with or without
-    modification, are permitted provided that the following conditions are
-    met:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Redistributions of source code (XML DocBook) must retain the
-        above copyright notice, this list of conditions and the following
-        disclaimer as the first lines of this file unmodified.</p></li><li class="listitem"><p>Redistributions in compiled form (transformed to other DTDs,
-        converted to PDF, PostScript, RTF and other formats) must
-        reproduce the above copyright notice, this list of conditions and
-        the following disclaimer in the documentation and/or other
-        materials provided with the distribution.</p></li></ol></div><div xmlns="" class="important"><h3 class="admontitle">Important: </h3><p xmlns="http://www.w3.org/1999/xhtml">THIS DOCUMENTATION IS PROVIDED BY THE FREEBSD DOCUMENTATION
-      PROJECT "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
-      BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
-      FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
-      THE FREEBSD DOCUMENTATION PROJECT BE LIABLE FOR ANY DIRECT, INDIRECT,
-      INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-      BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
-      OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-      ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
-      TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
-      USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
-      DAMAGE.</p></div></div></div><div><div xmlns="http://www.w3.org/1999/xhtml" class="legalnotice"><a id="trademarks"></a><p>FreeBSD is a registered trademark of
-  the FreeBSD Foundation.</p><p>3Com and HomeConnect are registered
-  trademarks of 3Com Corporation.</p><p>3ware is a registered
-  trademark of 3ware Inc.</p><p>ARM is a registered trademark of ARM
-  Limited.</p><p>Adaptec is a registered trademark of
-  Adaptec, Inc.</p><p>Adobe, Acrobat, Acrobat Reader, Flash and
-  PostScript are either registered trademarks or trademarks of Adobe
-  Systems Incorporated in the United States and/or other
-  countries.</p><p>Apple, AirPort, FireWire,
-  iMac, iPhone, iPad,
-  Mac, Macintosh, Mac OS,
-  Quicktime, and TrueType are trademarks of Apple Inc.,
-  registered in the U.S. and other countries.</p><p>Android
-  is a trademark of Google Inc.</p><p>Heidelberg, Helvetica,
-  Palatino, and Times Roman are either registered trademarks or
-  trademarks of Heidelberger Druckmaschinen AG in the U.S. and other
-  countries.</p><p>IBM, AIX, OS/2,
-  PowerPC, PS/2, S/390, and ThinkPad are
-  trademarks of International Business Machines Corporation in the
-  United States, other countries, or both.</p><p>IEEE, POSIX, and 802 are registered
-  trademarks of Institute of Electrical and Electronics Engineers,
-  Inc. in the United States.</p><p>Intel, Celeron, Centrino, Core, EtherExpress, i386,
-  i486, Itanium, Pentium, and Xeon are trademarks or registered
-  trademarks of Intel Corporation or its subsidiaries in the United
-  States and other countries.</p><p>Intuit and Quicken are registered
-  trademarks and/or registered service marks of Intuit Inc., or one of
-  its subsidiaries, in the United States and other countries.</p><p>Linux is a registered trademark of
-  Linus Torvalds.</p><p>LSI Logic, AcceleRAID, eXtremeRAID,
-  MegaRAID and Mylex are trademarks or registered trademarks of LSI
-  Logic Corp.</p><p>Microsoft, IntelliMouse, MS-DOS,
-  Outlook, Windows, Windows Media and Windows NT are either
-  registered trademarks or trademarks of Microsoft Corporation in the
-  United States and/or other countries.</p><p>Motif, OSF/1, and UNIX are
-  registered trademarks and IT DialTone and The Open Group are
-  trademarks of The Open Group in the United States and other
-  countries.</p><p>Oracle is a registered trademark
-  of Oracle Corporation.</p><p>RealNetworks, RealPlayer, and
-  RealAudio are the registered trademarks of RealNetworks,
-  Inc.</p><p>Red Hat, RPM, are trademarks or
-  registered trademarks of Red Hat, Inc. in the United States and
-  other countries.</p><p>Sun, Sun Microsystems, Java, Java
-  Virtual Machine, JDK, JRE, JSP, JVM, Netra, OpenJDK,
-  Solaris, StarOffice, SunOS
-  and VirtualBox are trademarks or registered trademarks of
-  Sun Microsystems, Inc. in the United States and other countries.</p><p>MATLAB is a registered trademark
-  of The MathWorks, Inc.</p><p>SpeedTouch is a trademark of
-  Thomson.</p><p>VMware is a trademark of VMware,
-  Inc.</p><p>Mathematica is a registered
-  trademark of Wolfram Research, Inc.</p><p>XFree86 is a trademark of The
-  XFree86 Project, Inc.</p><p>Ogg Vorbis and Xiph.Org are trademarks
-  of Xiph.Org.</p><p>Many of the designations used by
-  manufacturers and sellers to distinguish their products are claimed
-  as trademarks.  Where those designations appear in this document,
-  and the FreeBSD Project was aware of the trademark claim, the
-  designations have been followed by the <span class="quote">“<span class="quote">™</span>”</span> or the
-  <span class="quote">“<span class="quote">®</span>”</span> symbol.</p></div></div><div>Last modified on 2016-01-28 by wblock.</div><div><div xmlns="http://www.w3.org/1999/xhtml" class="abstract"><div class="abstract-title">Abstract</div><p>Welcome to FreeBSD! This handbook covers the installation
-	and day to day use of
-	<span class="emphasis"><em>FreeBSD 9.3-RELEASE</em></span> and
-	<span class="emphasis"><em>FreeBSD 10.2-RELEASE</em></span>.  This book is
-	the result of ongoing work by many individuals.  Some sections
-	might be outdated.  Those interested in helping to update and
-	expand this document should send email to the <a class="link" href="http://lists.FreeBSD.org/mailman/listinfo/freebsd-doc" target="_top">FreeBSD documentation project mailing list</a>.</p><p>The latest version of this book is available from the
-	<a class="link" href="http://www.FreeBSD.org/" target="_top">FreeBSD web
-	  site</a>.  Previous versions can be obtained from <code class="uri"><a class="uri" href="http://docs.FreeBSD.org/doc/" target="_top">http://docs.FreeBSD.org/doc/</a></code>.
-	The book can be downloaded in a variety of formats and
-	compression options from the <a class="link" href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/" target="_top">FreeBSD
-	  FTP server</a> or one of the numerous
-	<a class="link" href="#mirrors-ftp" title="A.2.&nbsp;FTP Sites">mirror sites</a>.  Printed
-	copies can be purchased at the
-	<a class="link" href="http://www.freebsdmall.com/" target="_top">FreeBSD
-	  Mall</a>.  Searches can be performed on the handbook and
-	other documents on the
-	<a class="link" href="../../../../search/index.html" target="_top">search
-	  page</a>.</p></div></div></div>
+				<h1>The FreeBSD Documentation Project</h1>
+				<p class="intro">Revision <a href="https://svnweb.freebsd.org/changeset/doc/48108">48108</a><br>
+				Copyright &#169; 1995-2016 The FreeBSD Project</p>
+
+				<h2>Copyright</h2>
+
+				<p>
+					Redistribution and use in source (XML DocBook) and 'compiled' forms (XML, HTML, PDF, PostScript, RTF and so forth) with or without modification, are permitted provided that the following conditions are met:<br>
+					<ol>
+						<li>Redistributions of source code (XML DocBook) must retain the above copyright notice, this list of conditions and the following disclaimer as the first lines of this file unmodified.</li>
+						<li>Redistributions in compiled form (transformed to other DTDs, converted to PDF, PostScript, RTF and other formats) must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+					</ol>
+				</p>
+
+				<blockquote>
+					<h3>Important</h3>
+					THIS DOCUMENTATION IS PROVIDED BY THE FREEBSD DOCUMENTATION PROJECT "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FREEBSD DOCUMENTATION PROJECT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+				</blockquote>
+
+				<ul class="disclaimer">
+					<li>FreeBSD is a registered trademark of the FreeBSD Foundation.</li>
+					<li>3Com and HomeConnect are registered trademarks of 3Com Corporation.</li>
+					<li>3ware is a registered trademark of 3ware Inc.</li>
+					<li>ARM is a registered trademark of ARM Limited.</li>
+					<li>Adaptec is a registered trademark of Adaptec, Inc.</li>
+					<li>Adobe, Acrobat, Acrobat Reader, Flash and PostScript are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries.</li>
+					<li>Apple, AirPort, FireWire, iMac, iPhone, iPad, Mac, Macintosh, Mac OS, Quicktime, and TrueType are trademarks of Apple Inc., registered in the U.S. and other countries.</li>
+					<li>Android is a trademark of Google Inc.</li>
+					<li>Heidelberg, Helvetica, Palatino, and Times Roman are either registered trademarks or trademarks of Heidelberger Druckmaschinen AG in the U.S. and other countries.</li>
+					<li>IBM, AIX, OS/2, PowerPC, PS/2, S/390, and ThinkPad are trademarks of International Business Machines Corporation in the United States, other countries, or both.</li>
+					<li>IEEE, POSIX, and 802 are registered trademarks of Institute of Electrical and Electronics Engineers, Inc. in the United States.</li>
+					<li>Intel, Celeron, Centrino, Core, EtherExpress, i386, i486, Itanium, Pentium, and Xeon are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States and other countries.</li>
+					<li>Intuit and Quicken are registered trademarks and/or registered service marks of Intuit Inc., or one of its subsidiaries, in the United States and other countries.</li>
+					<li>Linux is a registered trademark of Linus Torvalds.</li>
+					<li>LSI Logic, AcceleRAID, eXtremeRAID, MegaRAID and Mylex are trademarks or registered trademarks of LSI Logic Corp.</li>
+					<li>Microsoft, IntelliMouse, MS-DOS, Outlook, Windows, Windows Media and Windows NT are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</li>
+					<li>Motif, OSF/1, and UNIX are registered trademarks and IT DialTone and The Open Group are trademarks of The Open Group in the United States and other countries.</li>
+					<li>Oracle is a registered trademark of Oracle Corporation.</li>
+					<li>RealNetworks, RealPlayer, and RealAudio are the registered trademarks of RealNetworks, Inc.</li>
+					<li>Red Hat, RPM, are trademarks or registered trademarks of Red Hat, Inc. in the United States and other countries.</li>
+					<li>Sun, Sun Microsystems, Java, Java Virtual Machine, JDK, JRE, JSP, JVM, Netra, OpenJDK, Solaris, StarOffice, SunOS and VirtualBox are trademarks or registered trademarks of Sun Microsystems, Inc. in the United States and other countries.</li>
+					<li>MATLAB is a registered trademark of The MathWorks, Inc.</li>
+					<li>SpeedTouch is a trademark of Thomson.</li>
+					<li>VMware is a trademark of VMware, Inc.</li>
+					<li>Mathematica is a registered trademark of Wolfram Research, Inc.</li>
+					<li>XFree86 is a trademark of The XFree86 Project, Inc.</li>
+					<li>Ogg Vorbis and Xiph.Org are trademarks of Xiph.Org.</li>
+					<li>Many of the designations used by manufacturers and sellers to distinguish their products are claimed as trademarks. Where those designations appear in this document, and the FreeBSD Project was aware of the trademark claim, the designations have been followed by the “&#8482;” or the “&#174;” symbol.</li>
+
+					<br><i>Last modified on 2016-01-28 by <strong>wblock</strong>.</i>
+				</ul>
 			</article>
 		</main>
 		<script type='text/javascript' id="__bs_script__">//<![CDATA[document.write("<script async src='http://HOST:1337/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));//]]></script>
