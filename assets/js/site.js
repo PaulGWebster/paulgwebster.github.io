@@ -35,7 +35,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$("a").on("click tap touchstart", function (event) {
+	$("a").on("click", function (event) {
 		if ($(this).attr("target") === "category" || $(this).parent("nav")) {
 			console.log("Target is a category");
 			var target = $(event.target).attr("href");
