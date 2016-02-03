@@ -17,6 +17,10 @@ $(document).ready(function() {
 		}
 	});
 
+	/**
+	 * Open the menu on [click, tap, touchstart]
+	 * Add overlay over content, on close delay the overlay by 300ms
+	 */
 	$(".toggle-menu").on("click tap touchstart", function() {
 		$(".overlay").show();
 		$("nav").addClass("menu-open");
@@ -25,7 +29,6 @@ $(document).ready(function() {
 			$("nav").removeClass("menu-open");
 
 			setTimeout(function(){
-				$("body").removeClass("stop-scroll");
 				$(".overlay").hide();
 			}, 300);
 		});
