@@ -121,12 +121,36 @@ main {
 }
 
 article {
+	padding-top: 80px;
+
+	p {
+		&.intro {
+			@include font(roboto, regular, 1.25);
+			padding-bottom: 40px;
+		}
+	}
+
 	h1 {
-		@include font(roboto, medium, 2.125);
+		@include font(roboto, regular, 2.125);
 	}
 
 	h2 {
 		@include font(roboto, regular, 1.5);
+	}
+
+	h1, h2 {
+		color: color(red);
+		margin: 0 0 30px;
+	}
+
+	ol {
+		list-style-type: decimal;
+		padding-left: 30px;
+
+		li {
+			list-style-type: inherit;
+			padding-left: 10px;
+		}
 	}
 }
 

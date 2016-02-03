@@ -441,17 +441,33 @@ main {
   transition: all .3s ease;
   width: 100%; }
 
-article h1 {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 2.125rem;
-  font-style: normal;
-  font-weight: 500; }
-
-article h2 {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400; }
+article {
+  padding-top: 80px; }
+  article p.intro {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 40px; }
+  article h1 {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2.125rem;
+    font-style: normal;
+    font-weight: 400; }
+  article h2 {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400; }
+  article h1, article h2 {
+    color: #f44336;
+    margin: 0 0 30px; }
+  article ol {
+    list-style-type: decimal;
+    padding-left: 30px; }
+    article ol li {
+      list-style-type: inherit;
+      padding-left: 10px; }
 
 .overlay {
   z-index: 90;
@@ -533,11 +549,19 @@ article h2 {
 @media only screen and (max-width: 760px) {
   main article {
     margin: 0 auto;
-    width: 360px; } }
+    width: 360px; }
+    main article h1 {
+      font-size: 1.5rem; }
+    main article h2 {
+      font-size: 1.25rem; } }
 
 @media screen and (max-width: 360px) {
   main article {
     margin: 0 auto;
-    width: 100%; } }
+    width: 100%; }
+    main article h1 {
+      font-size: 1.5rem; }
+    main article h2 {
+      font-size: 1.25rem; } }
 
 /*# sourceMappingURL=screen.css.map */
