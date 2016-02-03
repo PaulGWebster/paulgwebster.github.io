@@ -8,7 +8,6 @@ $(document).ready(function() {
 	}
 
 	$(".children").on("click tap touchstart", function(e) {
-		var sidebarLength = $(this).children("ul").children().length;
 		var target = $(e.target).parent();
 
 		if ($(this).children("ul").hasClass("open") && target.hasClass("children")) {
@@ -36,7 +35,7 @@ $(document).ready(function() {
 	 * Detect if window is wider that 1480px, and if the overlay is active.
 	 * Then remove overlay, and keep menu tray open
 	 */
-	$(window).resize(function(event) {
+	$(window).resize(function() {
 		var checkWidth = $(this).width();
 		if ((checkWidth >= 1480) && ($(".overlay").css("display") === "block") && ($("nav").hasClass("menu-open"))) {
 			$("nav").removeClass("menu-open");
@@ -59,6 +58,6 @@ $(document).ready(function() {
 				$("main article[data-category='" + target + "']").show("300");
 				return true;
 			}
-		}		
+		}
 	});
 });
