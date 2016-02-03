@@ -378,8 +378,8 @@ nav {
       font-weight: 700;
       line-height: 1em; }
       nav ul li a, nav ul li i {
-        display: block;
         cursor: pointer;
+        display: block;
         font-style: normal;
         padding: 15px 0 15px 22px; }
         nav ul li a:hover, nav ul li i:hover {
