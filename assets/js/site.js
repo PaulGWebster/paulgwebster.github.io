@@ -1,6 +1,33 @@
 'use strict';
 
+const Log = function (message, status) {
+	status = typeof status !== "undefined" ? status : 0;
+
+	if (status === 0) {
+		console.log("Message: " + message);
+	} else if (status === 1) {
+		console.log("Error: " + message);
+	} else {
+		console.log("Unknwon: " + message);
+	}
+};
+
+function showMenu() {
+	$(".overlay").show();
+	$("nav").addClass("menu-open");
+}
+
+function hideMenu() {
+	$("nav").removeAttr("class");
+
+	setTimeout(function () {
+		$(".overlay").removeAttr("style");
+	}, 300);
+}
+
 $(document).ready(function () {
+	Log("Document ready and loaded", 0);
+
 	$("main article[data-category='" + window.location.hash + "']").show();
 	if (!window.location.hash) {
 		$("main article[data-category='#handbook']").show();
@@ -11,7 +38,7 @@ $(document).ready(function () {
 		var target = $(e.target).parent();
 
 		if ($(this).children("ul").hasClass("open") && target.hasClass("children")) {
-			$(this).children("ul").css("max-height", "0px").removeClass("open");
+			$(this).children("ul").removeAttr("style").removeAttr("class");
 		} else {
 			$(this).children("ul").css("max-height", "500px").addClass("open");
 		}
@@ -22,16 +49,17 @@ $(document).ready(function () {
   * Add overlay over content, on close delay the overlay by 300ms
   */
 	$(".toggle-menu").on("click tap touchstart", function () {
-		$(".overlay").show();
-		$("nav").addClass("menu-open");
+		showMenu();
 
 		$(".overlay").on("click tap touchstart", function () {
-			$("nav").removeClass("menu-open");
-
-			setTimeout(function () {
-				$(".overlay").hide();
-			}, 300);
+			hideMenu();
 		});
+	});
+
+	$(window).on("keydown", function (event) {
+		if (event.keyCode === 27) {
+			$(".overlay").css("display") === "block" ? hideMenu() : showMenu();
+		}
 	});
 
 	/**
@@ -41,8 +69,7 @@ $(document).ready(function () {
 	$(window).resize(function () {
 		var checkWidth = $(this).width();
 		if (checkWidth >= 1480 && $(".overlay").css("display") === "block" && $("nav").hasClass("menu-open")) {
-			$("nav").removeClass("menu-open");
-			$(".overlay").hide();
+			hideMenu();
 		}
 	});
 
@@ -58,8 +85,7 @@ $(document).ready(function () {
 				return true;
 			} else {
 				if ($(".overlay").css("display") === "block" && $("nav").hasClass("menu-open")) {
-					$("nav").removeClass("menu-open");
-					$(".overlay").hide();
+					hideMenu();
 				}
 
 				$("main article").hide("300");
