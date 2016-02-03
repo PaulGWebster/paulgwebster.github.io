@@ -7,7 +7,31 @@
 	.phone, .tablet { display: none; }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1480px) {
+	.toggle-menu { display: none; }
+
+	header {
+		left: 240px;
+		width: calc(100vw - 240px);
+	}
+
+	nav {
+		left: 0;
+		position: fixed;
+	}
+
+	main {
+		left: 240px;
+		width: calc(100vw - 240px);
+
+		article {
+			margin: 0 auto;
+			width: 1140px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1479px) {
 	.toggle-menu { display: block; }
 
 	header {
@@ -25,24 +49,38 @@
 	main {
 		left: 0;
 		width: 100vw;
+
+		article {
+			margin: 0 auto;
+			width: 1140px;
+		}
 	}
 }
 
-@media only screen and (min-width: 1440px) {
-	.toggle-menu { display: none; }
 
-	header {
-		left: 240px;
-		width: calc(100vw - 240px);
-	}
-
-	nav {
-		left: 0;
-		position: fixed;
-	}
-
+@media only screen and (max-width: 1240px) {
 	main {
-		left: 240px;
-		width: calc(100vw - 240px);
+		article {
+			margin: 0 auto;
+			width: 760px;
+		}
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	main {
+		article {
+			margin: 0 auto;
+			width: 360px;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	main {
+		article {
+			margin: 0 auto;
+			width: 100%;
+		}
 	}
 }

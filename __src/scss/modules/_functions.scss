@@ -24,12 +24,7 @@ $font-stack: (
 	(group: robotoSlab,	id: thin,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 100, style: normal),
 	(group: robotoSlab,	id: light,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 300, style: normal),
 	(group: robotoSlab,	id: regular,		font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 400, style: normal),
-	(group: robotoSlab,	id: bold,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 700, style: normal),
-
-	(group: lora,	id: regular,			font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 400, style: normal),
-	(group: lora,	id: italic,				font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 400, style: italic),
-	(group: lora,	id: bold,				font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 600, style: normal),
-	(group: lora,	id: bold-italic,		font: ('Lora', 'Helvetica Neue', Georgia, serif), weight: 600, style: italic),
+	(group: robotoSlab,	id: bold,			font: ('Roboto Slab', 'Helvetica Neue', Helvetica, sans-serif), weight: 700, style: normal)
 );
 
 @mixin font($group, $id: regular, $size: 1) {

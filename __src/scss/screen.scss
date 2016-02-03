@@ -91,7 +91,7 @@ header {
 	left: 240px;
 	line-height: 65px;
 	position: fixed;
-	transition: all .3s ease;
+	transition: left .3s ease;
 	width: calc(100vw - 240px);
 
 	.category-title {
@@ -121,17 +121,12 @@ main {
 }
 
 article {
-	.article-header {
-		background-color: color(red);
-		height: 260px;
-		position: relative;
-		top: -65px;
+	h1 {
+		@include font(roboto, medium, 2.125);
+	}
 
-		p {
-			@include font(roboto, bold, 3.5);
-			margin: 0 auto;
-			width: 1160px;
-		}
+	h2 {
+		@include font(roboto, regular, 1.5);
 	}
 }
 

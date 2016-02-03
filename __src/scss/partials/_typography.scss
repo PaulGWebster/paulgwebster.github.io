@@ -49,19 +49,6 @@
 	font-family: 'Roboto Slab'; font-style: normal; font-weight: 700;
 	src: url('../fonts/roboto-slab/RobotoSlab-Bold.ttf') format('truetype'); }
 
-@font-face { // Lora Thin
-	font-family: 'Lora'; font-style: normal; font-weight: 400;
-	src: url('../fonts/lora/Lora-Regular.ttf') format('truetype'); }
-@font-face { // Lora Light
-	font-family: 'Lora'; font-style: italic; font-weight: 400;
-	src: url('../fonts/lora/Lora-Italic.ttf') format('truetype'); }
-@font-face { // Lora Regular
-	font-family: 'Lora'; font-style: normal; font-weight: 600;
-	src: url('../fonts/lora/Lora-Bold.ttf') format('truetype'); }
-@font-face { // Lora Bold
-	font-family: 'Lora'; font-style: italic; font-weight: 600;
-	src: url('../fonts/lora/Lora-BoldItalic.ttf') format('truetype'); }
-
 h1, h2, h3, h4, h5, h6 {
 	@include font(robot-slab);
 }
