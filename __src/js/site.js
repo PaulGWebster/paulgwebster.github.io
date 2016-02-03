@@ -57,6 +57,11 @@ $(document).ready(function() {
 			if (window.location.hash === target || !target) {
 				return true;
 			} else {
+				if (($(".overlay").css("display") === "block") && ($("nav").hasClass("menu-open"))) {
+					$("nav").removeClass("menu-open");
+					$(".overlay").hide();
+				}
+				
 				$("main article").hide("300");
 				$("main article[data-category='" + target + "']").show("300");
 				return true;
