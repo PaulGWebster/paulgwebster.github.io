@@ -47,6 +47,12 @@ nav {
 			@include font(roboto, bold, .8125);
 			line-height: 1em;
 
+			i {
+				display: block;
+				font-style: normal;
+				padding: 15px 0 15px 22px;
+			}
+
 			a {
 				display: block;
 				padding: 15px 0 15px 22px;

@@ -377,6 +377,10 @@ nav {
       font-style: normal;
       font-weight: 700;
       line-height: 1em; }
+      nav ul li i {
+        display: block;
+        font-style: normal;
+        padding: 15px 0 15px 22px; }
       nav ul li a {
         display: block;
         padding: 15px 0 15px 22px; }

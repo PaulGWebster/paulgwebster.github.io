@@ -36,7 +36,7 @@ $(document).ready(function() {
 	});
 
 	$("a").on("click", function(event) {
-		if ($(this).attr("target") === "category" || $(this).parent("nav")) {
+		if ($(this).data("target") === "category" || $(this).parent("nav")) {
 			console.log("Target is a category");
 			var target = $(event.target).attr("href");
 			console.log(target + " ==? " + window.location.hash);
