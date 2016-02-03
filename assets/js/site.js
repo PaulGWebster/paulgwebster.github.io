@@ -1,11 +1,14 @@
 'use strict';
 
 $(document).ready(function () {
-	$("main article[data-category='#handbook']").show();
-	window.location.hash = "#handbook";
+	$("main article[data-category='" + window.location.hash + "']").show();
+	if (!window.location.hash) {
+		$("main article[data-category='#handbook']").show();
+		window.location.hash = "#handbook";
 
-	//	$("main article[data-category='#preface']").show();
-	//	window.location.hash = "#preface";
+		//		$("main article[data-category='#preface']").show();
+		//		window.location.hash = "#preface";
+	}
 
 	$(".children").click(function (e) {
 		var sidebarLength = $(this).children("ul").children().length;
