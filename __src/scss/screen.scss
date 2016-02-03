@@ -84,7 +84,7 @@ nav {
 }
 
 header {
-	@include drop-shadow(2);
+	@include drop-shadow(1);
 	@include z-index(2);
 	background-color: color(red);
 	height: 65px;

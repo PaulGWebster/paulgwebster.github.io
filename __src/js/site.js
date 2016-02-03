@@ -3,11 +3,11 @@
 $(document).ready(function() {
 	$("main article[data-category='" + window.location.hash + "']").show()
 	if (!window.location.hash) {
-		$("main article[data-category='#handbook']").show();
-		window.location.hash = "#handbook";
+//		$("main article[data-category='#handbook']").show();
+//		window.location.hash = "#handbook";
 		
-//		$("main article[data-category='#preface']").show();
-//		window.location.hash = "#preface";
+		$("main article[data-category='#preface']").show();
+		window.location.hash = "#preface";
 	}
 
 	$(".children").click(function(e) {
@@ -35,15 +35,18 @@ $(document).ready(function() {
 		});
 	});
 
-	$("nav").click(function(event) {
-		var target = $(event.target).attr("href");
-		console.log(target + " ==? " + window.location.hash);
-		if (window.location.hash === target || !target) {
-			return false;
-		} else {
-			$("main article").hide("300");
-			$("main article[data-category='" + target + "']").show("300");
-			return true;
+	$("a").click(function(event) {
+		if ($(this).attr("target") === "category" || $(this).parent("nav")) {
+			console.log("Target is a category");
+			var target = $(event.target).attr("href");
+			console.log(target + " ==? " + window.location.hash);
+			if (window.location.hash === target || !target) {
+				return true;
+			} else {
+				$("main article").hide("300");
+				$("main article[data-category='" + target + "']").show("300");
+				return true;
+			}
 		}
 	});
 });

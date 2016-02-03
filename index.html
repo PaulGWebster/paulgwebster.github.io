@@ -35,16 +35,16 @@
 				</li>
 				<li class="children"><a><span>2. </span>Installing FreeBSD</a>
 					<ul>
-						<li><a href="#installing-synopsis"><span>2.1. </span>Synopsis</a></li>
-						<li><a href="#installing-minium-hardware"><span>2.2. </span>Minimum Hardware Requirements</a></li>
-						<li><a href="#installing-preinstallation-tasks"><span>2.3. </span>Pre-Installation Tasks</a></li>
-						<li><a href="#installing-starting-installing"><span>2.4. </span>Starting the Installation</a></li>
-						<li><a href="#installing-using-bsdinstall"><span>2.5. </span>Using bsdinstall</a></li>
-						<li><a href="#installing-allocation-disk-space"><span>2.6. </span>Allocating Disk Space</a></li>
-						<li><a href="#installing-committing-to-installtion"><span>2.7. </span>Committing to the Installation</a></li>
-						<li><a href="#installing-post-installation"><span>2.8. </span>Post-Installation</a></li>
-						<li><a href="#installing-troubleshooting"><span>2.9. </span>Troubleshooting</a></li>
-						<li><a href="#installing-using-live-cd"><span>2.10. </span>Using the Live CD</a></li>
+						<li><a href="#bsdinstall-synopsis"><span>2.1. </span>Synopsis</a></li>
+						<li><a href="#bsdinstall-minium-hardware"><span>2.2. </span>Minimum Hardware Requirements</a></li>
+						<li><a href="#bsdinstall-preinstallation-tasks"><span>2.3. </span>Pre-Installation Tasks</a></li>
+						<li><a href="#bsdinstall-starting-installing"><span>2.4. </span>Starting the Installation</a></li>
+						<li><a href="#bsdinstall-using-bsdinstall"><span>2.5. </span>Using bsdinstall</a></li>
+						<li><a href="#bsdinstall-allocation-disk-space"><span>2.6. </span>Allocating Disk Space</a></li>
+						<li><a href="#bsdinstall-committing-to-installtion"><span>2.7. </span>Committing to the Installation</a></li>
+						<li><a href="#bsdinstall-post-installation"><span>2.8. </span>Post-Installation</a></li>
+						<li><a href="#bsdinstall-troubleshooting"><span>2.9. </span>Troubleshooting</a></li>
+						<li><a href="#bsdinstall-using-live-cd"><span>2.10. </span>Using the Live CD</a></li>
 					</ul>
 				</li>
 				<li class="children"><a><span>3. </span>UNIX Basics</a>
@@ -161,6 +161,23 @@
 
 			<article data-category="#preface">
 				<h1>Preface</h1>
+
+				<h2>Intented Audience</h2>
+				<div class="intro">
+					<p>The FreeBSD newcomer will find that the first section of this book guides the user through the FreeBSD installation process and gently introduces the concepts and conventions that underpin UNIX®. Working through this section requires little more than the desire to explore, and the ability to take on board new concepts as they are introduced.</p>
+					<p>Once you have traveled this far, the second, far larger, section of the Handbook is a comprehensive reference to all manner of topics of interest to FreeBSD system administrators. Some of these chapters may recommend that you do some prior reading, and this is noted in the synopsis at the beginning of each chapter.</p>
+					<p>For a list of additional sources of information, please see <a href="https://www.freebsd.org/doc/handbook/book.html#bibliography">Appendix B, Bibliography</a>.</p>
+				</div>
+
+				<h2>Changes from the Third Edition</h2>
+				<p>The current online version of the Handbook represents the cumulative effort of many hundreds of contributors over the past 10 years. The following are some of the significant changes since the two volume third edition was published in 2004:</p>
+				<ul>
+					<li><a target="category" href="#dtrace-synopsis">Chapter 24, DTrace</a> has been added with information about the powerful DTrace performance analysis tool.</li>
+					<li><a target="category" href="#filesystems-synopsis">Chapter 20, Other File Systems</a> has been added with information about non-native file systems in FreeBSD, such as ZFS from Sun™.</li>
+					<li><a target="category" href="#audit-synopsis">Chapter 16, Security Event Auditing</a> has been added to cover the new auditing capabilities in FreeBSD and explain its use.</li>
+					<li><a target="category" href="#virtualization">Chapter 21, Virtualization</a> has been added with information about installing FreeBSD on virtualization software.</li>
+					<li><a target="category" href="#bsdinstall-synopsis">Chapter 2, Installing FreeBSD</a> has been added to cover installation of FreeBSD using the new installation utility, bsdinstall.</li>
+				</ul>
 			</article>
 		</main>
 		<script type='text/javascript' id="__bs_script__">//<![CDATA[document.write("<script async src='http://HOST:1337/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));//]]></script>
