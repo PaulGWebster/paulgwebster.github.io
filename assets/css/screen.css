@@ -445,12 +445,17 @@ article {
   padding-top: 80px; }
   article blockquote, article p, article h1, article h2, article h3, article ul {
     margin: 0 0 30px; }
-  article p.intro {
+  article a {
+    border-bottom: 1px solid #f44336;
+    color: #f44336; }
+  article .intro {
     font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     padding-bottom: 40px; }
+    article .intro p {
+      margin-bottom: 10px; }
   article ul.disclaimer li {
     font-size: .8125rem;
     line-height: 1.5; }

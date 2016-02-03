@@ -127,10 +127,17 @@ article {
 		margin: 0 0 30px;
 	}
 
-	p {
-		&.intro {
-			@include font(roboto, regular, 1.25);
-			padding-bottom: 40px;
+	a {
+		border-bottom: 1px solid color(red);
+		color: color(red);
+	}
+
+	.intro {
+		@include font(roboto, regular, 1.25);
+		padding-bottom: 40px;
+
+		p {
+			margin-bottom: 10px;
 		}
 	}
 
