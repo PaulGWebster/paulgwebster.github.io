@@ -404,6 +404,22 @@ nav {
           font-weight: 400; }
           nav ul li ul li a {
             padding: 10px 0 10px 46px; }
+  nav .footer {
+    background-color: white;
+    bottom: 0;
+    display: block;
+    position: fixed;
+    width: -moz-calc(240px - 1px);
+    width: calc(240px - 1px); }
+    nav .footer p {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      padding-bottom: 5px;
+      text-align: center; }
+    nav .footer a {
+      color: #f44336; }
 
 header {
   box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.24), 0 3px 8px rgba(0, 0, 0, 0.05);

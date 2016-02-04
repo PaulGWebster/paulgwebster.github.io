@@ -50,10 +50,10 @@ $(document).ready(function () {
   */
 	$(".toggle-menu").on("click tap touchstart", function () {
 		showMenu();
+	});
 
-		$(".overlay").on("click tap touchstart", function () {
-			hideMenu();
-		});
+	$(".overlay").on("click tap touchstart", function () {
+		hideMenu();
 	});
 
 	$(window).on("keydown", function (event) {
