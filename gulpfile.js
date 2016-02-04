@@ -50,7 +50,7 @@
 	gulp.task("js", function() {
 		return gulp.src(src.js)
 				   .pipe(sourcemaps.init())
-				   .pipe(babel())
+				   .pipe(babel({presets: ['es2015']}))
 				   .on("error", errorAlert)
 				   .pipe(sourcemaps.write("."))
 				   .pipe(gulp.dest(dist.js))

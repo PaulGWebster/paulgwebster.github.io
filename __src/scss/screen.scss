@@ -17,7 +17,7 @@
 	-o-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-	line-height: 1.4;
+	line-height: 1.5;
 	-ms-overflow-style: -ms-autohiding-scrollbar; // IE11+
 	overflow-y: scroll; // All browsers without overlaying scrollbars
 	text-rendering: optimizeLegibility;
@@ -40,7 +40,7 @@ nav {
 	overflow-y: auto;
 	position: fixed;
 	transition: left .3s ease;
-	width: 240px;
+	width: $navWidth;
 
 	ul {
 		padding: 12px 0;
@@ -91,7 +91,7 @@ nav {
 		bottom: 0;
 		display: block;
 		position: fixed;
-		width: calc(240px - 1px);
+		width: calc($navWidth - 1px);
 
 		p {
 			@include font(roboto, regular, .75);
@@ -108,11 +108,11 @@ header {
 	@include z-index(2);
 	background-color: color(red);
 	height: 65px;
-	left: 240px;
+	left: $navWidth;
 	line-height: 65px;
 	position: fixed;
 	transition: left .3s ease;
-	width: calc(100vw - 240px);
+	width: calc(100vw - $navWidth);
 
 	.category-title {
 		@include font(roboto);
@@ -133,7 +133,7 @@ header {
 }
 
 main {
-	left: 240px;
+	left: $navWidth;
 	position: absolute;
 	top: 65px;
 	transition: all .3s ease;
@@ -220,7 +220,7 @@ footer {
 	height: 66px;
 	line-height: 65px;
 	text-align: center;
-	width: 240px;
+	width: $navWidth;
 
 	svg {
 		height: 40px;

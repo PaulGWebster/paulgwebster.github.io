@@ -345,7 +345,7 @@ figure {
   -o-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  line-height: 1.4;
+  line-height: 1.5;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
@@ -409,8 +409,8 @@ nav {
     bottom: 0;
     display: block;
     position: fixed;
-    width: -moz-calc(240px - 1px);
-    width: calc(240px - 1px); }
+    width: -moz-calc($navWidth - 1px);
+    width: calc($navWidth - 1px); }
     nav .footer p {
       font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
       font-size: 0.75rem;
@@ -432,8 +432,8 @@ header {
   -webkit-transition: left .3s ease;
   -moz-transition: left .3s ease;
   transition: left .3s ease;
-  width: -moz-calc(100vw - 240px);
-  width: calc(100vw - 240px); }
+  width: -moz-calc(100vw - $navWidth);
+  width: calc(100vw - $navWidth); }
   header .category-title {
     font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1rem;

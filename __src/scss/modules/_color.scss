@@ -1,25 +1,24 @@
 //
 // Color
-// 
 // @group:	Name of the color
 // @id:		Tint of color, [pale | normal | dark]
 // @color:	HEX code of the color
 //
 $color-stack: (
-	(group: red,			id: lighten-5,	color:	#FFEBEE),
-	(group: red,			id: lighten-4,	color:	#FFCDD2),
-	(group: red,			id: lighten-3,	color:	#EF9A9A),
-	(group: red,			id: lighten-2,	color:	#E57373),
-	(group: red,			id: lighten-1,	color:	#EF5350),
-	(group: red,			id: base,		color:	#F44336),
-	(group: red,			id: darken-1,	color:	#E53935),
-	(group: red,			id: darken-2,	color:	#D32F2F),
-	(group: red,			id: darken-3,	color:	#C62828),
-	(group: red,			id: darken-4,	color:	#B71C1C),
-	(group: red,			id: accent-1,	color:	#FF8A80),
-	(group: red,			id: accent-2,	color:	#FF5252),
-	(group: red,			id: accent-3,	color:	#FF1744),
-	(group: red,			id: accent-4,	color:	#D50000),
+	(group: red,			id: lighten-5,	color:	#ffebee),
+	(group: red,			id: lighten-4,	color:	#ffcdd2),
+	(group: red,			id: lighten-3,	color:	#ef9a9a),
+	(group: red,			id: lighten-2,	color:	#e57373),
+	(group: red,			id: lighten-1,	color:	#ef5350),
+	(group: red,			id: base,		color:	#f44336),
+	(group: red,			id: darken-1,	color:	#e53935),
+	(group: red,			id: darken-2,	color:	#d32f2f),
+	(group: red,			id: darken-3,	color:	#c62828),
+	(group: red,			id: darken-4,	color:	#b71c1c),
+	(group: red,			id: accent-1,	color:	#ff8a80),
+	(group: red,			id: accent-2,	color:	#ff5252),
+	(group: red,			id: accent-3,	color:	#ff1744),
+	(group: red,			id: accent-4,	color:	#d50000),
 
 	(group: pink,			id: lighten-5,	color:	#fce4ec),
 	(group: pink,			id: lighten-4,	color:	#f8bbd0),
@@ -197,7 +196,7 @@ $color-stack: (
 	(group: yellow,			id: darken-3,	color:	#f9a825),
 	(group: yellow,			id: darken-4,	color:	#f57f17),
 	(group: yellow,			id: accent-1,	color:	#ffff8d),
-	(group: yellow,			id: accent-2,	color:	#ffff00),
+	(group: yellow,			id: accent-2,	color:	#ff0),
 	(group: yellow,			id: accent-3,	color:	#ffea00),
 	(group: yellow,			id: accent-4,	color:	#ffd600),
 

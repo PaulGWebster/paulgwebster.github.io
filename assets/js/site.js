@@ -1,7 +1,7 @@
 'use strict';
 
-const Log = function (message, status) {
-	status = typeof status !== "undefined" ? status : 0;
+var Log = function Log(message) {
+	var status = arguments.length <= 1 || arguments[1] === undefined ? 0 : arguments[1];
 
 	if (status === 0) {
 		console.log("Message: " + message);
