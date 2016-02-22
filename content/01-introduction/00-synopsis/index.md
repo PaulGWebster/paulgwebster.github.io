@@ -1,14 +1,10 @@
+{
+	"category": "introduction",
+	"chapter": "synopsis",
+	"title": "The FreeBSD Documentation Project",
+	"last-edit": "22-02-2016-14-52-33"
+}
 ---##---
-<style>
-ul {
-	padding-left: 30px;
-}
-li {
-	list-style-type: disc;
-	padding: 0 0 5px 10px;
-}
-</style>
-
 # Introduction - Synopsis
 
 Thank you for your interest in FreeBSD! The following chapter covers various aspects of the FreeBSD Project, such as its history, goals, development model, and so on.

@@ -17,18 +17,7 @@ function u($path = "") {
 	return $prefix . $_SERVER["SERVER_NAME"] . "/" .  $path;
 }
 
-$app->get("/pages/{category}/{topic}", function($req, $res) use ($Parsedown, $Extra){
-	header('Access-Control-Allow-Origin: *');
-	$category = $req->getAttribute("category");
-	$topic = $req->getAttribute("topic");
-
-	$content = file_get_contents($_SERVER["DOCUMENT_ROOT"] . DS . "content" . DS . $category . DS . $topic . DS . "index.md");
-	$contentSplit = preg_split("/---##---/", $content);
-	$json = json_decode($contentSplit[0], true);
-	return $Extra->text($contentSplit[1]);
-});
-
-$app->get("/test", function($req, $res) use ($Parsedown, $Extra) {
+$app->get("/", function($req, $res) use ($Parsedown, $Extra) {
 	include "site/snippets/header.php";
 	echo "<main>";
 
@@ -52,13 +41,6 @@ $app->get("/test", function($req, $res) use ($Parsedown, $Extra) {
 	echo "</main>";
 	include "site/snippets/footer.php";
 });
-
-$app->get("/", function() {
-	include "site/snippets/header.php";
-	echo "<main><article style='display:block;'></article></main>";
-	include "site/snippets/footer.php";
-});
-
 
 $app->run();
 ?>

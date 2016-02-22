@@ -5,12 +5,6 @@
 	"last-edit": "22-02-2016-14-52-33"
 }
 ---##---
-<style>
-li {
-	font-size: .8125rem;
-	line-height: 1.5;
-}
-</style>
 # The FreeBSD Documentation Project
 
 <div class="intro" markdown="1">
@@ -28,9 +22,11 @@ Redistribution and use in source (XML DocBook) and 'compiled' forms (XML, HTML, 
 1. Redistributions of source code (XML DocBook) must retain the above copyright notice, this list of conditions and the following disclaimer as the first lines of this file unmodified.
 2. Redistributions in compiled form (transformed to other DTDs, converted to PDF, PostScript, RTF and other formats) must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
+
 > ### Important
 > THIS DOCUMENTATION IS PROVIDED BY THE FREEBSD DOCUMENTATION PROJECT "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FREEBSD DOCUMENTATION PROJECT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+<div class="disclaimer" markdown="1">
 * FreeBSD is a registered trademark of the FreeBSD Foundation.
 * 3Com and HomeConnect are registered trademarks of 3Com Corporation.
 * 3ware is a registered trademark of 3ware Inc.
@@ -59,6 +55,7 @@ Redistribution and use in source (XML DocBook) and 'compiled' forms (XML, HTML, 
 * XFree86 is a trademark of The XFree86 Project, Inc.
 * Ogg Vorbis and Xiph.Org are trademarks of Xiph.Org.
 * Many of the designations used by manufacturers and sellers to distinguish their products are claimed as trademarks. Where those designations appear in this document, and the FreeBSD Project was aware of the trademark claim, the designations have been followed by the “™” or the “®” symbol.
+</div>
 
 <div style="position: relative;top: -16px;font-size: .8125rem;">
 Last modified on 2016-01-28 by wblock.

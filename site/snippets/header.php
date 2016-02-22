@@ -15,11 +15,7 @@
 		</div>
 
 		<header>
-			<div class="category-title">FreeBSD Handbook
-				<span data-chapter="00" data-chapter-title="handbook" data-chapter-page="handbook">One</span>
-				<span data-chapter="00" data-chapter-title="preface" data-chapter-page="preface">Two</span>
-				<span data-chapter="01" data-chapter-title="introduction" data-chapter-page="00-synopsis">Three</span>
-			</div>
+			<div class="category-title">FreeBSD Handbook</div>
 		</header>
 
 		<nav>

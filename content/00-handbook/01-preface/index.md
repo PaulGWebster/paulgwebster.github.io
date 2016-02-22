@@ -5,15 +5,6 @@
 	"last-edit": "22-02-2016-14-52-33"
 }
 ---##---
-<style>
-ul { padding-left: 0; }
-ul li {
-margin-left: 0;
-list-style-type: none;
-line-height: 1.5;
-}
-</style>
-
 # Preface
 ## Intended Audience
 The FreeBSD newcomer will find that the first section of this book guides the user through the FreeBSD installation process and gently introduces the concepts and conventions that underpin UNIX®. Working through this section requires little more than the desire to explore, and the ability to take on board new concepts as they are introduced.
