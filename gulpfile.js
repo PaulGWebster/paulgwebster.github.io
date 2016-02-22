@@ -28,8 +28,12 @@
 
 	options = {
 		browserSync: {
-			server: "./",
-			port:	1337
+			proxy:	"https://bsddoc.dev",
+			port:	1337,
+			https:	{
+				key: "../ssl/bsddoc.dev.key",
+				cert: "../ssl/bsddoc.dev.crt"
+			}
 		},
 		prefix: {
 			browsers: ["> 5%", "last 4 versions", "firefox > 3.6", "ie > 7"]

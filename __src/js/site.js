@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const Log = function(message, status = 0) {
 	if (status === 0) {
@@ -8,7 +8,7 @@ const Log = function(message, status = 0) {
 	} else {
 		console.log("Unknwon: " + message);
 	}
-}
+};
 
 function showMenu() {
 	$(".overlay").show();
@@ -23,14 +23,27 @@ function hideMenu() {
 	}, 300);
 }
 
+//$("main article").load("https://bsddoc.dev/pages/00-handbook/handbook");
 $(document).ready(function() {
 	Log("Document ready and loaded", 0);
 
-	$("main article[data-category='" + window.location.hash + "']").show()
+	$("main article[data-category='" + window.location.hash + "']").show();
 	if (!window.location.hash) {
-		$("main article[data-category='#handbook']").show();
-		window.location.hash = "#handbook";
+		$("main article[data-category='#handbook-intro']").show();
+		window.location.hash = "#handbook-intro";
 	}
+
+	/*$("header span").click(function() {
+		var chapter = $(this).data("chapter"),
+			chapterTitle = $(this).data("chapter-title"),
+			chapterPage = $(this).data("chapter-page");
+
+		if (!chapterPage) {
+			$("main article").load("https://bsddoc.dev/pages/" + chapter + "-" + chapterTitle + "/");
+		} else {
+			$("main article").load("https://bsddoc.dev/pages/" + chapter + "-" + chapterTitle + "/" + chapterPage);
+		}
+	});*/
 
 	$(".children").on("click tap touchstart", function(e) {
 		var target = $(e.target).parent();

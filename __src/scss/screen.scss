@@ -91,7 +91,7 @@ nav {
 		bottom: 0;
 		display: block;
 		position: fixed;
-		width: calc($navWidth - 1px);
+		width: calc(#{$navWidth} - 1px);
 
 		p {
 			@include font(roboto, regular, .75);
@@ -112,7 +112,7 @@ header {
 	line-height: 65px;
 	position: fixed;
 	transition: left .3s ease;
-	width: calc(100vw - $navWidth);
+	width: calc(100vw - #{$navWidth});
 
 	.category-title {
 		@include font(roboto);
@@ -129,6 +129,10 @@ header {
 
 	svg {
 		padding: 20.5px;
+	}
+
+	&:hover {
+		cursor: pointer;
 	}
 }
 
