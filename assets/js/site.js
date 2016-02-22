@@ -25,7 +25,6 @@ function hideMenu() {
 	}, 300);
 }
 
-//$("main article").load("https://bsddoc.dev/pages/00-handbook/handbook");
 $(document).ready(function () {
 	Log("Document ready and loaded", 0);
 
@@ -34,17 +33,6 @@ $(document).ready(function () {
 		$("main article[data-category='#handbook-intro']").show();
 		window.location.hash = "#handbook-intro";
 	}
-
-	/*$("header span").click(function() {
- 	var chapter = $(this).data("chapter"),
- 		chapterTitle = $(this).data("chapter-title"),
- 		chapterPage = $(this).data("chapter-page");
- 		if (!chapterPage) {
- 		$("main article").load("https://bsddoc.dev/pages/" + chapter + "-" + chapterTitle + "/");
- 	} else {
- 		$("main article").load("https://bsddoc.dev/pages/" + chapter + "-" + chapterTitle + "/" + chapterPage);
- 	}
- });*/
 
 	$(".children").on("click tap touchstart", function (e) {
 		var target = $(e.target).parent();
