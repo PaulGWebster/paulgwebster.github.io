@@ -24,18 +24,21 @@ $app->get("/", function($req, $res) use ($Parsedown, $Extra) {
 	$blacklist = array(".", "..", ".DS_Store");
 	$categories = scandir($_SERVER["DOCUMENT_ROOT"] . DS . "content");
 	foreach ($categories as $category) {
-		$chapters = scandir($_SERVER["DOCUMENT_ROOT"] . DS . "content" . DS . $category);
-		foreach ($chapters as $chapter) {
-			if (!in_array($category, $blacklist) && !in_array($chapter, $blacklist)):
-				$content = file_get_contents($_SERVER["DOCUMENT_ROOT"] . DS . "content" . DS . $category . DS . $chapter . DS . "index.md");
-				$contentSplit = preg_split("/---##---/", $content);
-				$json = json_decode($contentSplit[0], true);
+		if (!in_array($category, $blacklist)):
+			$chapters = scandir($_SERVER["DOCUMENT_ROOT"] . DS . "content" . DS . $category);
+			foreach ($chapters as $chapter) {
+				if (!in_array($chapter, $blacklist)):
+					$content = file_get_contents($_SERVER["DOCUMENT_ROOT"] . DS . "content" . DS . $category . DS . $chapter . DS . "index.md");
+					$contentSplit = preg_split("/---##---/", $content);
+					$json = json_decode($contentSplit[0], true);
 
-				echo "<article data-category=\"#". $json["category"] ."-". $json["chapter"] ."\">";
-				echo $Extra->text($contentSplit[1]);
-				echo "</article>";
-			endif;
-		}
+					echo "<article data-category=\"#". $json["category"] ."-". $json["chapter"] ."\">";
+					echo "<div class=\"hidden\">". $json["title"] ."</div>";
+					echo $Extra->text($contentSplit[1]);
+					echo "</article>";
+				endif;
+			}
+		endif;
 	}
 
 	echo "</main>";
