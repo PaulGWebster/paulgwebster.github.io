@@ -464,6 +464,10 @@ main {
 article {
   display: none;
   padding-top: 80px; }
+  article .hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden; }
   article blockquote, article p, article h1, article h2, article h3, article ul {
     margin: 0 0 30px; }
   article a {

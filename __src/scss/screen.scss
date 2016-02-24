@@ -148,6 +148,8 @@ article {
 	display: none;
 	padding-top: 80px;
 
+	.hidden { display: none; opacity: 0; visibility: hidden; }
+
 	blockquote, p, h1, h2, h3, ul {
 		margin: 0 0 30px;
 	}

@@ -29,9 +29,13 @@ $(document).ready(function() {
 	$("main article[data-category='" + window.location.hash + "']").show();
 	if (!window.location.hash) {
 		$("main article[data-category='#handbook-intro']").show();
+		$("header .category-title").html($("main article[data-category='#handbook-intro'] .hidden").html());
 		window.location.hash = "#handbook-intro";
 	}
 
+	/**
+	 * Open sidmenu tray on [click, tap, touchstart]
+	 */
 	$(".children").on("click tap touchstart", function(e) {
 		var target = $(e.target).parent();
 
@@ -88,6 +92,7 @@ $(document).ready(function() {
 
 				$("main article").hide("300");
 				$("main article[data-category='" + target + "']").show("300");
+				$("header .category-title").html($("main article[data-category='" + target + "'] .hidden").html());
 				return true;
 			}
 		}
