@@ -1,7 +1,7 @@
 {
 	"category": "handbook",
 	"chapter": "intro",
-	"title": "The FreeBSD Documentation Project",
+	"title": "Handbook - Intro",
 	"last-edit": "22-02-2016-14-52-33"
 }
 ---##---
